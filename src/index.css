@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'hanken';
+  src: url('/fonts/HankenGrotesk-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gregonia';
+  src: url('/fonts/Gregonia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'melodrama';
+  src: url('/fonts/font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'caviar';
+  src: url('/fonts/CaviarDreams.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.navbar {
+  font-family: 'gregonia', sans-serif;
+}
+.largeText{
+  font-family: 'melodrama', sans-serif;
+}
+.smallText{
+  font-family: 'caviar', sans-serif;
+}
+
+body {
+  background: #161616; 
+  color: #FEFAF7;
+  overflow-x: hidden;
+  font-family: 'hanken', sans-serif;
+}
+
