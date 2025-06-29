@@ -23,6 +23,7 @@ const Navbar = () => {
     const wText = useRef();
     const logoText = useRef();
     const logoPara = useRef();
+    const burgerIcon= useRef();
 
 
 
@@ -53,7 +54,7 @@ const Navbar = () => {
             opacity: 100,
             duration: 0.3,
             ease: "power2.out",
-        }, 0.7)
+        }, 0.8)
 
         burgerTl.current = gsap.timeline({ paused: true }).to(topBar.current, {
             rotate: 225,
@@ -73,9 +74,12 @@ const Navbar = () => {
         if (isOpen) {
             tl.current.reverse();
             burgerTl.current.reverse();
+            document.body.style.overflow = "auto";
+            
         } else {
             tl.current.play();
             burgerTl.current.play();
+            document.body.style.overflow = "hidden";
         }
         setIsOpen(!isOpen);
     }
@@ -92,7 +96,7 @@ const Navbar = () => {
                     <div className="smallText cursor-pointer hidden sm:flex">
                         <p ref={wText} className="text-[#FEFAF7]">sakshamorig123@gmail.com</p>
                     </div>
-                    <div className="bg-[#FEFAF7] text-[#161616] h-[58px] w-[58px] rounded-full flex items-center justify-center cursor-pointer menuCircle" onClick={toggleMenu}>
+                    <div ref={burgerIcon} className="bg-[#FEFAF7] h-[58px] w-[58px] rounded-full flex items-center justify-center cursor-pointer menuCircle" onClick={toggleMenu}>
                         <div className="h-full w-full flex flex-col justify-center items-center relative">
                             <div ref={topBar} className="bg-[#161616] h-[2px] w-[28px] rounded-full absolute origin-center "></div>
                             <div ref={botBar} className="bg-[#161616] h-[2px] w-[28px] rounded-full absolute origin-center "></div>
